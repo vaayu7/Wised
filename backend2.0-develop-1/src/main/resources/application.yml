@@ -1,0 +1,117 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: backend-application
+  datasource:
+    url: jdbc:h2:mem:testes
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically update the schema
+  sql: DEBUG
+  thymeleaf:
+    cache: false
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 611903254473093
+            client-secret:
+            redirectUri: http://localhost:8080/login/oauth2/code/google
+            scope:
+              - email
+          facebook:
+            client-id: 310995628483-7uc30i8rq2j8050lavecl2qamogeg0bh.apps.googleusercontent.com
+            client-secret:
+            redirectUri: http://localhost:8080/login/oauth2/code/facebook
+            scope:
+              - email
+              - public_profile
+              -
+                #management:
+                #  tracing:
+                #    sampling:
+                #      probability: 1.0
+                #    exporter:
+                #      jaeger:
+                #        endpoint: http://jaeger:14268/api/traces  # Update to the correct endpoint
+                #        enabled: true
+                #    url: http://jaeger:16686
+                #
+                #opentracing:
+                #  jaeger:
+                #    udp-sender:
+                #      host: jaeger  # UDP host for sender. By default, Jaeger libraries use a UDP sender to report finished spans to the Jaeger-agent daemon
+                #      port: 6831  # UDP port
+                #    log-spans: true
+
+  data:
+    elasticsearch:
+      cluster-nodes=localhost: 9200
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-group
+      auto-offset-reset: earliest
+
+application:
+  security:
+    jwt:
+      secret-key: Ma7xVrdhbEYNiFUjoiWdDZtxdZdfgsdfKH80id2Tq1bZC64
+      expiration: 300000 # 5 min
+      refresh-token:
+        expiration: 604800000 #7 days
+      reset-token:
+        expiration: 120000 #two min
+    allowed-attempts:
+      login: 3
+  url:
+    front-end:
+      get:
+        forgot-password: http://localhost:5173/reset
+        loader-page: http://localhost:5173/google_redirect
+
+
+
+
+
+
+cloud:
+  aws:
+    region:
+      static: ap-northeast-1
+
+    credentials:
+      accessKey: AKIA55RUG4ZW3CVW3YEO
+      secretKey:
+
+    s3:
+      bucketName: csvbucketloop
+
+
+

@@ -1,0 +1,104 @@
+{
+  "universities": [
+    {
+      "id": 1,
+      "name": "Delhi University",
+      "city": "Example City",
+      "institutes": [
+        {
+          "id": 101,
+          "name": "Example Institute A",
+          "city": "Example City",
+          "specializations": [
+            "Computer Science",
+            "Electrical Engineering",
+            "Business Administration"
+          ]
+        },
+        {
+          "id": 102,
+          "name": "Example Institute B",
+          "city": "Example Town",
+          "specializations": [
+            "Mechanical Engineering",
+            "Marketing",
+            "Finance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Another University",
+      "city": "Another City",
+      "institutes": [
+        {
+          "id": 201,
+          "name": "Institute XYZ",
+          "city": "Another City",
+          "specializations": [
+            "Biology",
+            "Chemistry",
+            "Physics"
+          ]
+        }
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "name": "Example Board 1",
+      "schools": [
+        {
+          "id": 1,
+          "name": "Example School A",
+          "city": "Example City",
+          "location": "Example Location",
+          "specializations": [
+            "Mathematics",
+            "Science",
+            "History"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Example School B",
+          "city": "Example Town",
+          "location": "Example Location",
+          "specializations": [
+            "Literature",
+            "Art",
+            "Music"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Example Board 2",
+      "schools": [
+        {
+          "id": 3,
+          "name": "Example School C",
+          "city": "Example City",
+          "location": "Example Location",
+          "specializations": [
+            "Mathematics",
+            "Science",
+            "History"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Example School D",
+          "city": "Example Town",
+          "location": "Example Location",
+          "specializations": [
+            "Literature",
+            "Art",
+            "Music"
+          ]
+        }
+      ]
+    }
+  ]
+}

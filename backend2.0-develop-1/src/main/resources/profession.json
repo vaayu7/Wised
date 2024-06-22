@@ -1,0 +1,30 @@
+{
+  "industry": [
+    "Technology",
+    "Finance",
+    "Healthcare",
+    "Education",
+    "Retail"
+  ],
+  "companyName": [
+    "ABC Company",
+    "XYZ Corporation",
+    "DEF Enterprises",
+    "GHI Ltd",
+    "JKL Solutions"
+  ],
+  "designation": [
+    "Software Engineer",
+    "Financial Analyst",
+    "Doctor",
+    "Teacher",
+    "Sales Manager"
+  ],
+  "location": [
+    "New York",
+    "London",
+    "Los Angeles",
+    "Paris",
+    "Tokyo"
+  ]
+}
